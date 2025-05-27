@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Ngày Sinh</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Thông Tin Ngày Sinh</h1>
+            <p id="greeting">Vui lòng chia sẻ ngày sinh của bạn!</p>
+        </header>
+
+        <main>
+            <div class="form-container">
+                <form id="birthday-form">
+                    <div class="form-group">
+                        <label for="name">Họ và Tên:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="birthdate">Ngày Sinh:</label>
+                        <input type="date" id="birthdate" name="birthdate" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Lời Nhắn (tùy chọn):</label>
+                        <textarea id="message" name="message" rows="3"></textarea>
+                    </div>
+
+                    <button type="submit" id="submit-btn">Gửi Thông Tin</button>
+                </form>
+            </div>
+
+            <div class="share-section" id="share-section">
+                <h2>Chia Sẻ Với Bạn Bè</h2>
+                <p>Sao chép liên kết dưới đây và gửi cho bạn bè để hỏi ngày sinh của họ:</p>
+                <div class="link-container">
+                    <input type="text" id="share-link" readonly>
+                    <button id="copy-btn">Sao chép</button>
+                </div>
+                <div class="social-share">
+                    <button id="share-facebook">Facebook</button>
+                    <button id="share-email">Email</button>
+                    <button id="share-whatsapp">WhatsApp</button>
+                </div>
+            </div>
+
+            <div class="thank-you" id="thank-you">
+                <h2>Cảm ơn bạn!</h2>
+                <p>Thông tin của bạn đã được ghi nhận.</p>
+                <div class="submitted-info" id="submitted-info"></div>
+            </div>
+
+            <div class="responses" id="responses">
+                <h2>Danh Sách Phản Hồi</h2>
+                <div class="responses-list" id="responses-list"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Thông Tin Ngày Sinh &copy; 2025</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
